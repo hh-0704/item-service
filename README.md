@@ -23,20 +23,6 @@
 - **Template Engine**: Thymeleaf
 - **기타**: Lombok
 
-## 🗂 프로젝트 구조
-
-```
-item-service
-├── domain
-│   └── item
-│       ├── Item.java            # 상품 도메인 모델
-│       └── ItemRepository.java  # 상품 저장소 (메모리 기반)
-└── web
-    └── item
-        └── basic
-            └── BasicItemController.java  # 상품 관리 컨트롤러
-```
-
 ## 📝 학습 노트
 
 ### 구현 기능 목록
@@ -77,17 +63,6 @@ return "redirect:/basic/items/{itemId}";
 ```
 
 > `addAttribute`로 추가한 값은 URL 쿼리 파라미터로 자동 전달되어 `${param.status}`로 읽을 수 있습니다.
-
-### 타임리프 핵심 문법 요약
-
-| 문법 | 설명 |
-|------|------|
-| `th:href="@{/basic/items/{id}(id=${item.id})}"` | URL 경로 변수 + 파라미터 처리 |
-| `th:each="item : ${items}"` | 반복 처리 |
-| `th:text="${item.itemName}"` | 텍스트 출력 |
-| `th:value="${item.id}"` | 속성 값 설정 |
-| `th:if="${param.status}"` | 조건부 렌더링 |
-| `th:action="@{/basic/items/add}"` | 폼 액션 URL |
 
 ## 🔗 참고 자료
 
